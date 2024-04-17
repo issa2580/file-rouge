@@ -1,16 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Menu</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style/bootstrap-cerulean.min.css">
-</head>
-<body>
-      <nav class="nav navbar-inverse">
-      	 <ul class="nav navbar-nav">
-		   <li><a href="#">Gestion des profiles utilisateurs</a></li>
-      	 </ul>
-      </nav>
+<?php
 
-</body>
-</html> 
+ if (isset($_GET['page'])){
+  require_once 'menu.php';
+
+   switch ($_GET['page']) {
+
+   	     case 'auth':
+   	       require_once 'auth.php';
+   		     break;
+
+   case 'addUser':
+           require_once 'view/user/addUser.php';
+           break;
+
+         case 'getUsers':
+           require_once 'model/db.php';
+           require_once 'model/user.php';
+           $liste=getUsers();
+           require_once 'view/user/getUsers.php';
+           break;
+
+         case 'updateUser':
+           require_once ('model/db.php');
+           require_once ('model/user.php');
+           $liste=getUserById($_GET['id']);
+           $user=mysqli_fetch_row($liste);
+           require_once ('view/user/updateUser.php');
+           break;
+   }
+ }
+          else {
+ 	           require_once 'auth.php';
+ }
