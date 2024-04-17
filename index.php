@@ -23,8 +23,8 @@
          case 'updateUser':
            require_once ('model/db.php');
            require_once ('model/user.php');
-           $liste=getUserById($_GET['id']);
-           $user=mysqli_fetch_row($liste);
+          //  $liste=getUserById($_GET['id']);
+          //  $user=mysqli_fetch_row($liste);
            require_once ('view/user/updateUser.php');
            break;
    }

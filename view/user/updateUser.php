@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>adduser</title>
+	<title>updateuser</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./style/bootstrap-cerulean.min.css">
   <link rel="stylesheet" type="text/css" href="./style/style.css">
@@ -9,9 +9,9 @@
 <body>
   <div class="container col-md-6 col-md-offset-3 dioubotron spacer">
   	<div class="panel panel-info">
-  		<div class="panel-heading center">Nouveau utilisateur</div>
+  		<div class="panel-heading center">Modifier utilisateur</div>
   		<div class="panel-body">
-  			<form method="POST" action="./controller/usercontroller.php">
+  			<form>
  
     
        <div class="form-group row">

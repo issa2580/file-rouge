@@ -19,7 +19,8 @@
             <th>Telephone</th>
             <th>Email</th>
    	 		<th>Adresse</th>
-            <th>Action </th>
+            <th>Action1 </th>
+			<th>Action2 </th>
    	 			</tr>
    	 			<tr>
    	 				<?php
@@ -31,7 +32,7 @@
                                       <td>$user[3]</td>
                                       <td>$user[4]</td>
                                       <td>$user[5]</td>
-									  <td><a href='./controller/usercontroller.php?action=modify&id=$user[0]' class='btn btn-primary'>Modifier</a></td>
+									  <td><a href='?page=updateUser' class='btn btn-primary'>Modifier</a></td>
 									  <td><a href='./controller/usercontroller.php?action=delete&id=$user[0]' class='btn btn-danger'>Supprimer</a></td>
                                   </tr>";
                          }
